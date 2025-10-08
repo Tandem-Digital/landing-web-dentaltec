@@ -71,6 +71,9 @@ export default function DentalTecPage() {
             <Link href="#instituciones" className="text-gray-700 hover:text-blue-600 transition-colors">
               Instituciones
             </Link>
+            <Link href="#obras-sociales" className="text-gray-700 hover:text-blue-600 transition-colors">
+              Obras Sociales
+            </Link>
             <Link href="#contacto" className="text-gray-700 hover:text-blue-600 transition-colors">
               Contacto
             </Link>
@@ -416,6 +419,53 @@ export default function DentalTecPage() {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="obras-sociales" className="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <div className="inline-block mb-4 px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-semibold">
+              Integración Completa
+            </div>
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">Obras Sociales Vinculadas</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Validación automática de legibilidad y prácticas en tiempo real a través de servicios web integrados
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {[
+              { name: "Jerárquicos" },
+              { name: "OSDE" },
+              { name: "OSP San Juan" },
+              { name: "Sancor" },
+              { name: "Swiss Medical" }
+            ].map((obra, i) => (
+              <Card key={i} className="border-2 hover:border-green-200 hover:shadow-xl transition-all group">
+                <CardContent className="p-6">
+                  <div className="text-center">
+                    <div className="w-20 h-20 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-4 border-2 border-dashed border-gray-300 group-hover:scale-105 transition-transform">
+                      <div className="text-center">
+                        <div className="w-8 h-8 bg-gray-400 rounded-lg mx-auto mb-1"></div>
+                        <p className="text-xs text-gray-500">Logo {obra.name}</p>
+                      </div>
+                    </div>
+                    <h3 className="font-bold text-xl text-gray-900">{obra.name}</h3>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          <div className="text-center mt-12">
+            <div className="inline-flex items-center gap-2 px-6 py-3 bg-green-50 text-green-700 rounded-full">
+              <Shield className="w-5 h-5" />
+              <span className="font-semibold">Validación en Tiempo Real</span>
+            </div>
+            <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+              Todas las obras sociales están conectadas mediante servicios web seguros que permiten
+              validación instantánea sin necesidad de llamadas telefónicas o consultas manuales.
+            </p>
           </div>
         </div>
       </section>
