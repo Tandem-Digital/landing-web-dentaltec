@@ -450,14 +450,14 @@ export default function DentalTecPage() {
                { name: "OSSEG" },
                { name: "IOSEP" },
                { name: "Hamburgo" },
-               { name: "OSM" },
+               { name: "OSM Santiago del Estero" },
                { name: "Policía Federal" },
                { name: "NOBIS", comingSoon: true }
              ].map((obra, i) => (
               <Card key={i} className="border-2 hover:border-green-200 hover:shadow-xl transition-all group">
                 <CardContent className="p-6">
                   <div className="text-center">
-                     <div className={obra.name === "Jerárquicos" || obra.name === "OSDE" || obra.name === "OSP San Juan" || obra.name === "Sancor" || obra.name === "Swiss Medical" || obra.name === "OSSEG" || obra.name === "IOSEP" || obra.name === "Hamburgo" || obra.name === "Policía Federal" || obra.name === "NOBIS" ? "w-32 h-32 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-105 transition-transform" : "w-20 h-20 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-4 border-2 border-dashed border-gray-300 group-hover:scale-105 transition-transform"}>
+                     <div className={obra.name === "Jerárquicos" || obra.name === "OSDE" || obra.name === "OSP San Juan" || obra.name === "Sancor" || obra.name === "Swiss Medical" || obra.name === "OSSEG" || obra.name === "IOSEP" || obra.name === "Hamburgo" || obra.name === "OSM Santiago del Estero" || obra.name === "Policía Federal" || obra.name === "NOBIS" ? "w-32 h-32 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-105 transition-transform" : "w-20 h-20 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-4 border-2 border-dashed border-gray-300 group-hover:scale-105 transition-transform"}>
                        {obra.name === "Jerárquicos" ? (
                          <img
                            src="/jerarquicos-logo.svg"
@@ -503,6 +503,12 @@ export default function DentalTecPage() {
                        ) : obra.name === "Hamburgo" ? (
                          <img
                            src="/hamburgo-logo.png"
+                           alt={`Logo ${obra.name}`}
+                           className="w-32 h-32 object-contain"
+                         />
+                       ) : obra.name === "OSM Santiago del Estero" ? (
+                         <img
+                           src="/logo-osm.png"
                            alt={`Logo ${obra.name}`}
                            className="w-32 h-32 object-contain"
                          />
