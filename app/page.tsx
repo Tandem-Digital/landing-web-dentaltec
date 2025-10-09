@@ -437,30 +437,96 @@ export default function DentalTecPage() {
             </div>
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">Obras Sociales Vinculadas</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Validación automática de legibilidad y prácticas en tiempo real a través de servicios web integrados
+              Validación automática de legibilidad de afiliados y prácticas en tiempo real a través de servicios web integrados
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {[
-              { name: "Jerárquicos" },
-              { name: "OSDE" },
-              { name: "OSP San Juan" },
-              { name: "Sancor" },
-              { name: "Swiss Medical" }
-            ].map((obra, i) => (
+             {[
+               { name: "Jerárquicos" },
+               { name: "OSDE" },
+               { name: "OSP San Juan" },
+               { name: "Sancor" },
+               { name: "Swiss Medical" },
+               { name: "OSSEG" },
+               { name: "IOSEP" },
+               { name: "Hamburgo" },
+               { name: "OSM" },
+               { name: "NOBIS", comingSoon: true }
+             ].map((obra, i) => (
               <Card key={i} className="border-2 hover:border-green-200 hover:shadow-xl transition-all group">
                 <CardContent className="p-6">
                   <div className="text-center">
-                    <div className="w-20 h-20 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-4 border-2 border-dashed border-gray-300 group-hover:scale-105 transition-transform">
-                      <div className="text-center">
-                        <div className="w-8 h-8 bg-gray-400 rounded-lg mx-auto mb-1"></div>
-                        <p className="text-xs text-gray-500">Logo {obra.name}</p>
-                      </div>
-                    </div>
-                    <h3 className="font-bold text-xl text-gray-900">{obra.name}</h3>
-                  </div>
-                </CardContent>
-              </Card>
+                     <div className={obra.name === "Jerárquicos" || obra.name === "OSDE" || obra.name === "OSP San Juan" || obra.name === "Sancor" || obra.name === "Swiss Medical" || obra.name === "OSSEG" || obra.name === "IOSEP" || obra.name === "Hamburgo" || obra.name === "NOBIS" ? "w-32 h-32 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-105 transition-transform" : "w-20 h-20 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-4 border-2 border-dashed border-gray-300 group-hover:scale-105 transition-transform"}>
+                       {obra.name === "Jerárquicos" ? (
+                         <img
+                           src="/jerarquicos-logo.svg"
+                           alt={`Logo ${obra.name}`}
+                           className="w-32 h-32 object-contain"
+                         />
+                       ) : obra.name === "OSDE" ? (
+                         <img
+                           src="/osde-logo.webp"
+                           alt={`Logo ${obra.name}`}
+                           className="w-32 h-32 object-contain"
+                         />
+                       ) : obra.name === "OSP San Juan" ? (
+                         <img
+                           src="/osp-logo.svg"
+                           alt={`Logo ${obra.name}`}
+                           className="w-32 h-32 object-contain"
+                         />
+                       ) : obra.name === "Sancor" ? (
+                         <img
+                           src="/sancor-logo.svg"
+                           alt={`Logo ${obra.name}`}
+                           className="w-32 h-32 object-contain"
+                         />
+                       ) : obra.name === "Swiss Medical" ? (
+                         <img
+                           src="/swiss-logo.svg"
+                           alt={`Logo ${obra.name}`}
+                           className="w-32 h-32 object-contain"
+                         />
+                       ) : obra.name === "OSSEG" ? (
+                         <img
+                           src="/osseg-logo.png"
+                           alt={`Logo ${obra.name}`}
+                           className="w-32 h-32 object-contain"
+                         />
+                       ) : obra.name === "IOSEP" ? (
+                         <img
+                           src="/iosep-logo.png"
+                           alt={`Logo ${obra.name}`}
+                           className="w-32 h-32 object-contain object-left"
+                         />
+                       ) : obra.name === "Hamburgo" ? (
+                         <img
+                           src="/hamburgo-logo.png"
+                           alt={`Logo ${obra.name}`}
+                           className="w-32 h-32 object-contain"
+                         />
+                       ) : obra.name === "NOBIS" ? (
+                         <img
+                           src="/nobis-logo.svg"
+                           alt={`Logo ${obra.name}`}
+                           className="w-32 h-32 object-contain"
+                         />
+                       ) : (
+                         <div className="text-center">
+                           <div className="w-8 h-8 bg-gray-400 rounded-lg mx-auto mb-1"></div>
+                           <p className="text-xs text-gray-500">Logo {obra.name}</p>
+                         </div>
+                       )}
+                     </div>
+                     <h3 className="font-bold text-xl text-gray-900">{obra.name}</h3>
+                     {obra.comingSoon && (
+                       <div className="mt-2 inline-block px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-semibold">
+                         Próximamente
+                       </div>
+                     )}
+                   </div>
+                 </CardContent>
+               </Card>
             ))}
           </div>
           <div className="text-center mt-12">
