@@ -50,13 +50,12 @@ export default function DentalTecPage() {
     <div className="min-h-screen bg-white">
       <header className="border-b bg-white sticky top-0 z-50 backdrop-blur-sm bg-white/90">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center">
-              <Network className="w-6 h-6 text-white" />
-            </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
-              DentalTec
-            </span>
+          <div className="flex items-center gap-3">
+            <img
+              src="/dentaltec-logo.png"
+              alt="DentalTec Logo"
+              className="h-10 w-auto"
+            />
           </div>
           <nav className="hidden md:flex items-center gap-8">
             <Link href="#inicio" className="text-gray-700 hover:text-blue-600 transition-colors">
@@ -89,6 +88,13 @@ export default function DentalTecPage() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
+              <div className="flex justify-start mb-8">
+                <img
+                  src="/dentaltec-logo.png"
+                  alt="DentalTec Logo"
+                  className="h-24 w-auto"
+                />
+              </div>
               <div className="inline-block mb-4 px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold">
                 La red que transforma la gestión odontológica
               </div>
@@ -590,6 +596,13 @@ export default function DentalTecPage() {
       <section className="py-20 bg-gradient-to-br from-blue-900 to-cyan-900 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
+            <div className="flex justify-center mb-8">
+              <img
+                src="/dentaltec-logo-white.png"
+                alt="DentalTec Logo"
+                className="h-20 w-auto"
+              />
+            </div>
             <h2 className="text-3xl md:text-5xl font-bold mb-4">Resultados que Hablan por Sí Solos</h2>
             <p className="text-lg text-blue-200 max-w-2xl mx-auto">
               Miles de profesionales e instituciones confían en DentalTec
@@ -681,11 +694,12 @@ export default function DentalTecPage() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center">
-                  <Network className="w-6 h-6 text-white" />
-                </div>
-                <span className="text-2xl font-bold">DentalTec</span>
+              <div className="flex items-center gap-3 mb-4">
+                <img
+                  src="/dentaltec-logo-white.png"
+                  alt="DentalTec Logo"
+                  className="h-10 w-auto"
+                />
               </div>
               <p className="text-gray-400 text-sm leading-relaxed">
                 La red que conecta, agiliza y transforma la gestión odontológica.
