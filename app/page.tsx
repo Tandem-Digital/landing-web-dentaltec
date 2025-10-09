@@ -347,7 +347,7 @@ export default function DentalTecPage() {
       </section>
 
       <Dialog open={!!selectedVideo} onOpenChange={() => setSelectedVideo(null)}>
-        <DialogContent className="max-w-[95vw] w-[95vw] p-0">
+        <DialogContent className="max-w-6xl w-full p-0">
           <DialogHeader className="p-6 pb-4">
             <DialogTitle className="text-2xl font-bold">
               {videos.find((v) => v.id === selectedVideo)?.title}
@@ -440,12 +440,7 @@ export default function DentalTecPage() {
               { name: "OSDE" },
               { name: "OSP San Juan" },
               { name: "Sancor" },
-              { name: "Swiss Medical" },
-              { name: "OSSEG" },
-              { name: "IOSEP" },
-              { name: "OSM" },
-              { name: "Hamburgo" },
-              { name: "NOBIS", comingSoon: true }
+              { name: "Swiss Medical" }
             ].map((obra, i) => (
               <Card key={i} className="border-2 hover:border-green-200 hover:shadow-xl transition-all group">
                 <CardContent className="p-6">
@@ -457,11 +452,6 @@ export default function DentalTecPage() {
                       </div>
                     </div>
                     <h3 className="font-bold text-xl text-gray-900">{obra.name}</h3>
-                    {obra.comingSoon && (
-                      <div className="mt-2 inline-block px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-semibold">
-                        Próximamente
-                      </div>
-                    )}
                   </div>
                 </CardContent>
               </Card>
