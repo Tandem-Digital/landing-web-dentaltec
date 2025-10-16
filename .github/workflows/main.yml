@@ -1,0 +1,34 @@
+name: Deploy
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v2
+      - name: Copy repository contents via scp
+        uses: appleboy/scp-action@master
+        with:
+          command_timeout: 20m
+          host: ${{ secrets.HOST_SERVER_1 }}
+          username: ${{ secrets.USER_SERVER_1 }}
+          port: ${{ secrets.PORT_SERVER_1 }}
+          key: ${{ secrets.SSHKEY_SERVER_1 }}
+          source: "."
+          target: "/home/apps/${{ github.event.repository.name }}"
+      - name: Deploy con SSH
+        uses: appleboy/ssh-action@master
+        with:
+          command_timeout: 20m
+          host: ${{secrets.HOST_SERVER_1}}
+          username: ${{ secrets.USER_SERVER_1 }}
+          key: ${{ secrets.SSHKEY_SERVER_1 }}
+          port: ${{ secrets.PORT_SERVER_1 }}
+          script: |
+            cd /home/apps/${{ github.event.repository.name }}
+            docker compose build
+            docker rollout dentaltec-app
