@@ -162,7 +162,7 @@ export default function DentalTecPage() {
                     <Users className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
-                    <p className="text-2xl font-bold text-gray-900">500+</p>
+                    <p className="text-2xl font-bold text-gray-900">2000+</p>
                     <p className="text-sm text-gray-600">Profesionales activos</p>
                   </div>
                 </div>
@@ -679,7 +679,7 @@ export default function DentalTecPage() {
           </div>
           <div className="grid md:grid-cols-4 gap-8">
             {[
-              { number: "500+", label: "Odontólogos Activos", icon: Users },
+              { number: "2000+", label: "Odontólogos Activos", icon: Users },
               { number: "30+", label: "Instituciones", icon: Building2 },
               { number: "-64%", label: "Reducción de débitos", icon: TrendingUp },
               { number: "-75%", label: "Tiempo de Gestión", icon: Clock },
