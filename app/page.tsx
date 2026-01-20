@@ -260,8 +260,8 @@ export default function DentalTecPage() {
       {/* Header */}
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
-          ? "bg-white/98 backdrop-blur-xl shadow-xl shadow-gray-900/[0.08] py-2"
-          : "bg-white/80 backdrop-blur-lg py-4"
+          ? "bg-white/98 backdrop-blur-xl shadow-xl shadow-gray-900/[0.08] py-2 sm:py-2.5"
+          : "bg-white/80 backdrop-blur-lg py-3 sm:py-4"
           }`}
       >
         {/* Gradient border bottom */}
@@ -362,7 +362,7 @@ export default function DentalTecPage() {
       {/* Hero Section */}
       <section
         id="inicio"
-        className="relative min-h-screen flex items-center pt-20 overflow-hidden"
+        className="relative min-h-screen flex items-center pt-16 sm:pt-20 overflow-hidden"
       >
         {/* Background Elements */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-50 via-white to-white" />
@@ -382,15 +382,15 @@ export default function DentalTecPage() {
         <div className="absolute bottom-1/4 -left-32 w-96 h-96 bg-cyan-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30" />
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-center">
             {/* Left Content */}
             <div className="max-w-2xl">
               {/* Logo grande de DentalTec */}
-              <div className="mb-8 animate-fade-in-up">
+              <div className="mb-6 md:mb-8 animate-fade-in-up">
                 <img
                   src="/dentaltec-logo.png"
                   alt="DentalTec"
-                  className="h-16 md:h-20 lg:h-24 w-auto"
+                  className="h-12 sm:h-16 md:h-20 lg:h-24 w-auto"
                 />
               </div>
 
@@ -456,7 +456,7 @@ export default function DentalTecPage() {
             {/* Right Content - Dashboard Preview */}
             <div className="relative animate-fade-in-up" style={{ animationDelay: "300ms" }}>
               {/* Main Card */}
-              <div className="relative bg-white rounded-2xl shadow-2xl shadow-gray-200/50 border border-gray-100 p-6 md:p-8">
+              <div className="relative bg-white rounded-2xl shadow-2xl shadow-gray-200/50 border border-gray-100 p-4 sm:p-6 md:p-8">
                 {/* Header */}
                 <div className="flex items-center justify-between mb-6 pb-4 border-b border-gray-100">
                   <div className="flex items-center gap-3">
@@ -529,8 +529,8 @@ export default function DentalTecPage() {
                 </div>
               </div>
 
-              {/* Floating Cards */}
-              <div className="absolute -bottom-4 -left-4 md:-left-8 bg-white p-4 rounded-xl shadow-xl shadow-gray-200/50 border border-gray-100 animate-fade-in-up" style={{ animationDelay: "600ms" }}>
+              {/* Floating Cards - ocultas en móvil */}
+              <div className="hidden md:block absolute -bottom-4 -left-4 lg:-left-8 bg-white p-4 rounded-xl shadow-xl shadow-gray-200/50 border border-gray-100 animate-fade-in-up" style={{ animationDelay: "600ms" }}>
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center shadow-lg shadow-violet-500/20">
                     <Users className="w-6 h-6 text-white" />
@@ -542,7 +542,7 @@ export default function DentalTecPage() {
                 </div>
               </div>
 
-              <div className="absolute -top-2 -right-2 md:-right-6 bg-white p-3 rounded-xl shadow-xl shadow-gray-200/50 border border-gray-100 animate-fade-in-up" style={{ animationDelay: "700ms" }}>
+              <div className="hidden md:block absolute -top-2 -right-2 lg:-right-6 bg-white p-3 rounded-xl shadow-xl shadow-gray-200/50 border border-gray-100 animate-fade-in-up" style={{ animationDelay: "700ms" }}>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-teal-500 to-emerald-600 flex items-center justify-center shadow-lg shadow-teal-500/20">
                     <Building2 className="w-5 h-5 text-white" />
@@ -562,24 +562,24 @@ export default function DentalTecPage() {
       </section>
 
       {/* Trusted By Section */}
-      <section className="py-12 bg-gray-50/50 border-y border-gray-100">
+      <section className="py-8 md:py-12 bg-gray-50/50 border-y border-gray-100">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col items-center justify-center gap-8">
-            <p className="text-sm font-medium text-gray-500 uppercase tracking-wider">
+          <div className="flex flex-col items-center justify-center gap-6 md:gap-8">
+            <p className="text-xs sm:text-sm font-medium text-gray-500 uppercase tracking-wider">
               Confían en nosotros
             </p>
-            <div className="flex items-center gap-8 md:gap-12 opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500">
-              <img src="/jerarquicos-logo.svg" alt="Jerárquicos" className="h-8 object-contain" />
-              <img src="/osde-logo.webp" alt="OSDE" className="h-8 object-contain" />
-              <img src="/swiss-logo.svg" alt="Swiss Medical" className="h-8 object-contain" />
-              <img src="/sancor-logo.svg" alt="Sancor" className="h-8 object-contain" />
+            <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 md:gap-12 opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+              <img src="/jerarquicos-logo.svg" alt="Jerárquicos" className="h-6 sm:h-8 object-contain" />
+              <img src="/osde-logo.webp" alt="OSDE" className="h-6 sm:h-8 object-contain" />
+              <img src="/swiss-logo.svg" alt="Swiss Medical" className="h-6 sm:h-8 object-contain" />
+              <img src="/sancor-logo.svg" alt="Sancor" className="h-6 sm:h-8 object-contain" />
             </div>
           </div>
         </div>
       </section>
 
       {/* Sistema Adaptable Section */}
-      <section className="py-24 relative overflow-hidden">
+      <section className="py-16 md:py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800" />
 
         {/* Pattern */}
@@ -624,7 +624,7 @@ export default function DentalTecPage() {
       </section>
 
       {/* Beneficios Section */}
-      <section id="beneficios" className="py-24 bg-white relative">
+      <section id="beneficios" className="py-16 md:py-24 bg-white relative">
         <div className="container mx-auto px-4">
           <AnimateOnScroll animation="fade-up" className="text-center mb-16">
             <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-blue-50 border border-blue-100 text-blue-700 rounded-full text-sm font-medium">
@@ -658,9 +658,9 @@ export default function DentalTecPage() {
       </section>
 
       {/* Odontólogos Section */}
-      <section id="odontologos" className="py-24 relative overflow-hidden bg-gray-50">
+      <section id="odontologos" className="py-16 md:py-24 relative overflow-hidden bg-gray-50">
         <div className="container mx-auto px-4 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
             <AnimateOnScroll animation="fade-right">
               <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-blue-600 text-white rounded-full text-sm font-medium">
                 <Users className="w-4 h-4" />
@@ -702,7 +702,7 @@ export default function DentalTecPage() {
             </AnimateOnScroll>
 
             <AnimateOnScroll animation="fade-left">
-              <div className="relative">
+              <div className="relative mb-8 md:mb-0">
                 <div className="rounded-2xl overflow-hidden shadow-2xl shadow-gray-300/50">
                   <img
                     src="/dentist-with-dentaltec-system.jpg"
@@ -711,8 +711,8 @@ export default function DentalTecPage() {
                   />
                 </div>
 
-                {/* Stat Card */}
-                <div className="absolute -bottom-6 -right-6 bg-white p-5 rounded-xl shadow-xl border border-gray-100">
+                {/* Stat Card - oculta en móvil */}
+                <div className="hidden md:block absolute -bottom-6 -right-6 bg-white p-5 rounded-xl shadow-xl border border-gray-100">
                   <div className="flex items-center gap-3">
                     <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-green-600 flex items-center justify-center">
                       <TrendingUp className="w-6 h-6 text-white" />
@@ -730,7 +730,7 @@ export default function DentalTecPage() {
       </section>
 
       {/* Tutoriales Section */}
-      <section className="py-24 bg-white">
+      <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <AnimateOnScroll animation="fade-up" className="text-center mb-16">
             <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-blue-50 border border-blue-100 text-blue-700 rounded-full text-sm font-medium">
@@ -827,10 +827,10 @@ export default function DentalTecPage() {
       </Dialog>
 
       {/* Instituciones Section */}
-      <section id="instituciones" className="py-24 bg-gray-50 relative">
+      <section id="instituciones" className="py-16 md:py-24 bg-gray-50 relative">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <AnimateOnScroll animation="fade-right" className="order-2 lg:order-1">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
+            <AnimateOnScroll animation="fade-right" className="order-2 lg:order-1 mb-8 md:mb-0">
               <div className="relative">
                 <div className="rounded-2xl overflow-hidden shadow-2xl shadow-gray-300/50">
                   <img
@@ -840,8 +840,8 @@ export default function DentalTecPage() {
                   />
                 </div>
 
-                {/* Stat Card */}
-                <div className="absolute -bottom-6 -left-6 bg-white p-5 rounded-xl shadow-xl border border-gray-100">
+                {/* Stat Card - oculta en móvil */}
+                <div className="hidden md:block absolute -bottom-6 -left-6 bg-white p-5 rounded-xl shadow-xl border border-gray-100">
                   <div className="flex items-center gap-3">
                     <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
                       <Award className="w-6 h-6 text-white" />
@@ -899,7 +899,7 @@ export default function DentalTecPage() {
       </section>
 
       {/* Obras Sociales Section */}
-      <section id="obras-sociales" className="py-24 bg-white relative">
+      <section id="obras-sociales" className="py-16 md:py-24 bg-white relative">
         <div className="container mx-auto px-4">
           <AnimateOnScroll animation="fade-up" className="text-center mb-16">
             <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-emerald-50 border border-emerald-100 text-emerald-700 rounded-full text-sm font-medium">
@@ -918,13 +918,13 @@ export default function DentalTecPage() {
             {obrasSociales.map((obra, i) => (
               <AnimateOnScroll key={i} animation="scale" delay={i * 50}>
                 <Card className="border border-gray-100 shadow-sm hover:shadow-lg hover:border-emerald-200 transition-all duration-300 hover:-translate-y-1 overflow-hidden">
-                  <CardContent className="p-8 flex flex-col items-center text-center">
+                  <CardContent className="p-4 sm:p-6 md:p-8 flex flex-col items-center text-center">
                     {/* Logo grande centrado */}
-                    <div className="w-full h-28 flex items-center justify-center mb-6">
+                    <div className="w-full h-20 sm:h-24 md:h-28 flex items-center justify-center mb-4 md:mb-6">
                       <img
                         src={obra.logo}
                         alt={`Logo ${obra.name}`}
-                        className="max-w-[180px] max-h-24 w-auto h-auto object-contain"
+                        className="max-w-[120px] sm:max-w-[150px] md:max-w-[180px] max-h-16 sm:max-h-20 md:max-h-24 w-auto h-auto object-contain"
                       />
                     </div>
                     {/* Nombre y estado */}
@@ -961,7 +961,7 @@ export default function DentalTecPage() {
       </section>
 
       {/* Testimonios Section */}
-      <section id="testimonios" className="py-24 bg-gray-50 relative">
+      <section id="testimonios" className="py-16 md:py-24 bg-gray-50 relative">
         <div className="container mx-auto px-4">
           <AnimateOnScroll animation="fade-up" className="text-center mb-16">
             <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-blue-50 border border-blue-100 text-blue-700 rounded-full text-sm font-medium">
@@ -976,10 +976,10 @@ export default function DentalTecPage() {
             </p>
           </AnimateOnScroll>
 
-          <div className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-8">
+          <div className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-6 md:gap-8">
             <AnimateOnScroll animation="fade-right">
               <Card className="h-full border-0 shadow-xl shadow-gray-200/50 overflow-hidden">
-                <CardContent className="p-8 h-full flex flex-col relative">
+                <CardContent className="p-5 sm:p-6 md:p-8 h-full flex flex-col relative">
                   <div className="absolute top-6 right-6 text-blue-100">
                     <Quote className="w-12 h-12" />
                   </div>
@@ -1013,7 +1013,7 @@ export default function DentalTecPage() {
 
             <AnimateOnScroll animation="fade-left">
               <Card className="h-full border-0 shadow-xl shadow-gray-200/50 overflow-hidden">
-                <CardContent className="p-8 h-full flex flex-col relative">
+                <CardContent className="p-5 sm:p-6 md:p-8 h-full flex flex-col relative">
                   <div className="absolute top-6 right-6 text-cyan-100">
                     <Quote className="w-12 h-12" />
                   </div>
@@ -1048,7 +1048,7 @@ export default function DentalTecPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-24 relative overflow-hidden">
+      <section className="py-16 md:py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900" />
 
         {/* Grid Pattern */}
@@ -1093,10 +1093,10 @@ export default function DentalTecPage() {
       </section>
 
       {/* Contacto Section */}
-      <section id="contacto" className="py-24 bg-white relative">
+      <section id="contacto" className="py-16 md:py-24 bg-white relative">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <AnimateOnScroll animation="fade-up" className="text-center mb-12">
+            <AnimateOnScroll animation="fade-up" className="text-center mb-8 md:mb-12">
               <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-blue-50 border border-blue-100 text-blue-700 rounded-full text-sm font-medium">
                 <Send className="w-4 h-4" />
                 Contacto
@@ -1109,9 +1109,9 @@ export default function DentalTecPage() {
               </p>
             </AnimateOnScroll>
 
-            <div className="grid lg:grid-cols-5 gap-8">
+            <div className="grid lg:grid-cols-5 gap-6 md:gap-8">
               <AnimateOnScroll animation="fade-right" className="lg:col-span-2">
-                <div className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl p-6 md:p-8 text-white h-full">
+                <div className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl p-5 sm:p-6 md:p-8 text-white h-full">
                   <h3 className="text-xl font-bold mb-6">Información de Contacto</h3>
                   <div className="space-y-5">
                     {/* Email */}
@@ -1192,7 +1192,7 @@ export default function DentalTecPage() {
 
               <AnimateOnScroll animation="fade-left" className="lg:col-span-3">
                 <Card className="border-0 shadow-xl shadow-gray-200/50">
-                  <CardContent className="p-8">
+                  <CardContent className="p-5 sm:p-6 md:p-8">
                     {formStatus === 'success' ? (
                       <div className="text-center py-8">
                         <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -1308,7 +1308,7 @@ export default function DentalTecPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-white pt-16 pb-8 relative overflow-hidden">
+      <footer className="bg-slate-900 text-white pt-12 md:pt-16 pb-6 md:pb-8 relative overflow-hidden">
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
 
         <div className="container mx-auto px-4">
