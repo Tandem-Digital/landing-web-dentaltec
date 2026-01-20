@@ -1025,7 +1025,7 @@ export default function DentalTecPage() {
                     <div>
                       <h3 className="font-bold text-gray-900">Gabriel Saracco</h3>
                       <p className="text-cyan-600 text-sm font-medium">
-                        Presidente - Federación Odontológica de Mendoza
+                        Miembro de comisión directiva CORA
                       </p>
                     </div>
                   </div>
