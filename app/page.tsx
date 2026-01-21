@@ -980,6 +980,40 @@ export default function DentalTecPage() {
             <AnimateOnScroll animation="fade-right">
               <Card className="h-full border-0 shadow-xl shadow-gray-200/50 overflow-hidden">
                 <CardContent className="p-5 sm:p-6 md:p-8 h-full flex flex-col relative">
+                  <div className="absolute top-6 right-6 text-cyan-100">
+                    <Quote className="w-12 h-12" />
+                  </div>
+
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-xl font-bold text-white">FC</span>
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-gray-900">Fernando Cano</h3>
+                      <p className="text-cyan-600 text-sm font-medium">
+                        Odontólogo de COSJ, precursor e impulsor del proceso de transformación digital con DentalTec desde 1997
+                      </p>
+                    </div>
+                  </div>
+
+                  <p className="text-gray-600 leading-relaxed flex-1">
+                    "El sistema es muy predictivo, sencillo, la funcionalidad de la agenda con recordatorios automáticos 
+                    para pacientes es una herramienta indispensable. La auditoría que realiza es excelente y muy buena 
+                    la disposición de datos necesarios para la práctica diaria."
+                  </p>
+
+                  <div className="flex gap-1 mt-6">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <Star key={star} className="w-5 h-5 fill-amber-400 text-amber-400" />
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </AnimateOnScroll>
+
+            <AnimateOnScroll animation="fade-left">
+              <Card className="h-full border-0 shadow-xl shadow-gray-200/50 overflow-hidden">
+                <CardContent className="p-5 sm:p-6 md:p-8 h-full flex flex-col relative">
                   <div className="absolute top-6 right-6 text-blue-100">
                     <Quote className="w-12 h-12" />
                   </div>
@@ -1011,7 +1045,7 @@ export default function DentalTecPage() {
               </Card>
             </AnimateOnScroll>
 
-            <AnimateOnScroll animation="fade-left">
+            <AnimateOnScroll animation="fade-up">
               <Card className="h-full border-0 shadow-xl shadow-gray-200/50 overflow-hidden">
                 <CardContent className="p-5 sm:p-6 md:p-8 h-full flex flex-col relative">
                   <div className="absolute top-6 right-6 text-cyan-100">
